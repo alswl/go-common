@@ -1,4 +1,4 @@
-module github.com/go-common
+module github.com/alswl/go-common
 
 go 1.18
 
