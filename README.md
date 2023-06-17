@@ -1,2 +1,3 @@
 # go-common
-common using go functions
+
+common using go functions.
