@@ -55,3 +55,17 @@ func TestUnwrapListPointer(t *testing.T) {
 		})
 	}
 }
+
+type A struct {
+}
+
+func TestWrap(t *testing.T) {
+	a := "a"
+	assert.Equal(t, &a, Wrap(a))
+	num := 123
+	assert.Equal(t, &num, Wrap(num))
+	s := []string{"1"}
+	assert.Equal(t, &s, Wrap(s))
+	obj := A{}
+	assert.Equal(t, &obj, Wrap(obj))
+}

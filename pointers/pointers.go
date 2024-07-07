@@ -29,6 +29,9 @@ func WrapPointerInt32(value int32) *int32 {
 }
 
 func UnwrapPointerInt(value *int) int {
+	if value == nil {
+		return 0
+	}
 	return *value
 }
 
@@ -37,6 +40,9 @@ func WrapPointerInt(value int) *int {
 }
 
 func UnwrapPointerInt32(value *int32) int32 {
+	if value == nil {
+		return 0
+	}
 	return *value
 }
 
@@ -49,4 +55,8 @@ func UnwrapPointerString(value *string) string {
 		return ""
 	}
 	return *value
+}
+
+func Wrap[T any](value T) *T {
+	return &value
 }
